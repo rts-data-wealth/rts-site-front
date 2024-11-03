@@ -1,22 +1,24 @@
-import { twMerge } from "tailwind-merge";
-import { topMenuList } from "@/data/topMenuList";
-import { PropsWithChildren } from "react";
-import { ClassnameType } from "@/types";
+import { twMerge } from 'tailwind-merge'
+import { topMenuList } from '@/data/topMenuList'
+import { PropsWithChildren } from 'react'
+import { ClassnameType } from '@/types'
 
 export function Header({ className }: PropsWithChildren<ClassnameType>) {
   return (
     <header
       id="header"
       className={twMerge(
-        "fixed left-0 top-0 z-40 flex w-full items-center justify-center bg-primary p-8",
+        'fixed left-0 top-0 z-40 flex w-full items-center justify-center bg-red-500 p-8',
         className
       )}
-    >  <div className="flex items-center justify-between max-w-[1200px] mx-auto p-4">
+    >
+      {' '}
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between p-4">
         <nav>
           <ul className="flex items-center gap-4">
             {topMenuList.map((item) => (
               <li key={item.label}>
-                {item.mode === "link" ? (
+                {item.mode === 'link' ? (
                   <a
                     href={item.href}
                     className="link"

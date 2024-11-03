@@ -4,23 +4,23 @@
 
 @layer components {
   .link {
-    @apply relative text-white hover:text-neutral-1 transition-colors duration-300 ease-in-out leading-6 tracking-tight;
+    @apply relative leading-6 tracking-tight text-white transition-colors duration-300 ease-in-out hover:text-neutral-1;
   }
 
   .button {
-    @apply flex items-center gap-1 py-4 px-8 bg-accent text-white rounded border border-primary text-sm hover:bg-accent-dark duration-300 transition-all hover:scale-90;
+    @apply flex items-center gap-1 rounded border border-primary bg-accent px-8 py-4 text-sm text-white transition-all duration-300 hover:scale-90 hover:bg-accent-dark;
   }
 }
 
 :root {
-  --background: #1A1A1B;
+  --background: #1a1a1b;
   --foreground: #171717;
 
-  --color-primary: #1A1A1B;
-  --color-secondary: #54595F; 
-  --color-accent: #3D754E;
-  --color-accent-darker: #06481A;
-  --color-neutral-1: #B1AEAE;
+  --color-primary: #1a1a1b;
+  --color-secondary: #54595f;
+  --color-accent: #3d754e;
+  --color-accent-darker: #06481a;
+  --color-neutral-1: #b1aeae;
 }
 
 @media (prefers-color-scheme: dark) {
