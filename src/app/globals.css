@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply relative text-white hover:text-neutral-1 transition-colors duration-300 ease-in-out leading-6 tracking-tight;
+  }
+
+  .button {
+    @apply flex items-center gap-1 py-4 px-8 bg-accent text-white rounded border border-primary text-sm hover:bg-accent-dark duration-300 transition-all hover:scale-90;
+  }
+}
+
+:root {
+  --background: #1A1A1B;
+  --foreground: #171717;
+
+  --color-primary: #1A1A1B;
+  --color-secondary: #54595F; 
+  --color-accent: #3D754E;
+  --color-accent-darker: #06481A;
+  --color-neutral-1: #B1AEAE;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
