@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { include "rts-site-front.fullname" . } }
-  labels: { { - include "rts-site-front.labels" . | nindent 4 } }
+  name: {{ include "rts-site-front.fullname" . }}
+  labels: {{- include "rts-site-front.labels" . | nindent 4 }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
+    - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
       name: http
-  selector: { { - include "rts-site-front.selectorLabels" . | nindent 4 } }
+  selector: {{- include "rts-site-front.selectorLabels" . | nindent 4 }}
