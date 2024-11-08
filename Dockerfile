@@ -46,7 +46,6 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NEXT_FONT_GOOGLE_SKIP_DOWNLOAD=1
 ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
 
 # Copiar arquivos necessários
 COPY --from=builder /app/public ./public
